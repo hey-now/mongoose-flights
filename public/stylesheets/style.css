@@ -1,8 +1,30 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: bisque;
 }
 
 a {
   color: #00B7FF;
+}
+table, th, td {
+  border: 1px solid grey;
+}
+th {
+  color: whitesmoke;
+}
+tbody tr:nth-child(odd) {
+  background-color: #33eeff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #95cee4;
+}
+
+/* tbody tr {
+  background-image: url(noise.png);
+} */
+
+table {
+  background-color: #338bff;
 }
