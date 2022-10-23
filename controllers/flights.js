@@ -24,5 +24,7 @@ function newFlight(req, res) {
 function index(req, res) {
     Flight.find({}, function(err, flights) {
         res.render('flights/index', { flights });
+    }).sort({
+        departs: -1
     });
 }
