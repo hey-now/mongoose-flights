@@ -2,9 +2,16 @@ const Flight = require('../models/flight');
 
 module.exports = {
     index,
+    show,
     new: newFlight,
     create
 };
+
+function show(req, res) {
+    Flight.findById(req.params.id, function(err, flight) {
+        res.render('flights/show', { title: 'Flight Details', flight });
+    });
+}
 
 function create(req, res) {
     for (let key in req.body) {
