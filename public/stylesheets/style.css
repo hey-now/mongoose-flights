@@ -1,7 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: bisque;
+  background-image: url('https://imgur.com/qnkO2tZ.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-color: rgb(0, 35, 52);
+  position: absolute;
 }
 
 a {
@@ -29,5 +37,41 @@ table {
   background-color: #338bff;
 }
 #details {
+  color: green;
+}
+h1, h2, p, nav {
   color: whitesmoke;
+}
+label {
+  color: whitesmoke;
+}
+#nav {
+  background-color: #00B7FF;
+  padding: 10px;
+  color: white;
+  border-radius: 20%;
+  font-weight: bolder;
+  font-size: larger;
+  text-decoration: none;
+  border: 2px solid rgb(107, 107, 107);
+}
+#nav:hover, #addBtn:hover, button:hover {
+  background-color: lightgrey;
+  color: #00B7FF;
+}
+button {
+  color: whitesmoke;
+  background-color: #00B7FF;
+  border-radius: 20%;
+  height: 50px;
+  width: 100px;
+  font-size: larger;
+}
+#addBtn {
+  color: whitesmoke;
+  background-color: #00B7FF;
+  border-radius: 20%;
+  height: 50px;
+  width: 250px;
+  font-size: larger;
 }

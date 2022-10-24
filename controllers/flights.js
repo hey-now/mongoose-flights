@@ -12,7 +12,6 @@ function show(req, res) {
         flight.destinations.sort(function(a, b) {
             return a.arrival- b.arrival;
         });
-        console.log(flight.destinations);
         res.render('flights/show', { title: 'Flight Details', flight });
     });
 }
