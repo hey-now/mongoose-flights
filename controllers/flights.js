@@ -8,7 +8,11 @@ module.exports = {
 };
 
 function show(req, res) {
-    Flight.findById(req.params.id, function(err, flight) {
+    Flight.findById(req.params.id).populate('destinations').exec(function(err, flight) {
+        flight.destinations.sort(function(a, b) {
+            return a.arrival- b.arrival;
+        });
+        console.log(flight.destinations);
         res.render('flights/show', { title: 'Flight Details', flight });
     });
 }
@@ -29,9 +33,7 @@ function newFlight(req, res) {
 }
 
 function index(req, res) {
-    Flight.find({}, function(err, flights) {
+    Flight.find({}).sort('-departs').exec(function(err, flights) {
         res.render('flights/index', { flights });
-    }).sort({
-        departs: -1
     });
 }
