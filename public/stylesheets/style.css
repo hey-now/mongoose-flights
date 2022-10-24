@@ -28,3 +28,6 @@ tbody tr:nth-child(even) {
 table {
   background-color: #338bff;
 }
+#details {
+  color: whitesmoke;
+}
