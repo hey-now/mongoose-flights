@@ -14,8 +14,8 @@
         <% flights.forEach(function(fl) { %>
             <tr>
                 <td style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.airline %></td>
-                <td style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.airport %></td>
-                <td style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.flightNo %></td>
+                <td align="center" style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.airport %></td>
+                <td align="center" style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.flightNo %></td>
                 <td style="<%= (fl.departs < new Date()) ? "color: red" : "color: black" %>"><%= fl.departs %></td>
                 <td ><a href="/flights/<%= fl.id %>" id="details">DETAILS</a></td>
             </tr>
