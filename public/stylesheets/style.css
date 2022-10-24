@@ -39,7 +39,7 @@ table {
 #details {
   color: green;
 }
-h1, h2, p, nav {
+h1, h2, p, nav, h5 {
   color: whitesmoke;
 }
 label {
