@@ -32,7 +32,7 @@ function newFlight(req, res) {
 }
 
 function index(req, res) {
-    Flight.find({}).sort('-departs').exec(function(err, flights) {
+    Flight.find({}).sort('departs').exec(function(err, flights) {
         res.render('flights/index', { flights });
     });
 }
