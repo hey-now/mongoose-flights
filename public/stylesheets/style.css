@@ -45,7 +45,7 @@ h1, h2, p, nav, h5, #ticketDiv {
 label {
   color: whitesmoke;
 }
-#nav {
+#nav, #newTicket {
   background-color: #00B7FF;
   padding: 10px;
   color: white;

@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<h2><%= title %></h2>
 <a href="/flights">Back to Flights</a>
 <br><br>
 
@@ -22,13 +23,23 @@
     </tbody>
     </table><br><br>
 
-<div id="ticketDiv">Tickets:</div><br>
-<section>
-    <% tickets.forEach(function(t) { %>
-        <article class="badge"><%= t.seat %></article>
-        <article class="badge"><%= t.price %></article>
+<div id="ticketDiv"><h2>Tickets:</h2></div><br>
+<table>
+    <thead>
+        <tr>
+            <th>Seat:</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% tickets.forEach(function(t) { %>
+        <tr>
+            <td><%= t.seat %></td>
+            <td>$<%= t.price %></td>
+        </tr>
+    </tbody>
     <% }) %>
-</section>
+</table><br><br>
 <a id="newTicket" href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>
 
 <br><br><h2>Add Destination and Arrival Date/Time</h2>
