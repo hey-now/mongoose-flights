@@ -23,19 +23,17 @@
     </table><br><br>
 
 <div id="ticketDiv">Tickets:</div><br>
-<form action="/flights/<%= flight._id %>/tickets" id="add-ticket-to-flight" method="POST">
-    <select name="ticketId">
-        <%- tickets.forEach(t =>
-            `<option value="${t._id}">${t.seat}</option>`
-        ) %>
-    </select>
-    <button type="submit">Add Ticket</button>
-</form>
+<section>
+    <% tickets.forEach(function(t) { %>
+        <article class="badge"><%= t.seat %></article>
+        <article class="badge"><%= t.price %></article>
+    <% }) %>
+</section>
 <a id="newTicket" href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>
 
 <br><br><h2>Add Destination and Arrival Date/Time</h2>
 <form id="add-dest-arrival-form" method="POST"
-action="/<%= flight._id %>/dest-arrivals">
+action="/flights/<%= flight._id %>/dest-arrivals">
 <label>Destination:</label>
 <select name="airport">
     <option value="AUS">AUS</option>
