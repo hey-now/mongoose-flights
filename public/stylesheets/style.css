@@ -39,7 +39,7 @@ table {
 #details {
   color: green;
 }
-h1, h2, p, nav, h5 {
+h1, h2, p, nav, h5, #ticketDiv {
   color: whitesmoke;
 }
 label {
@@ -74,4 +74,7 @@ button {
   height: 50px;
   width: 250px;
   font-size: larger;
+}
+#add-ticket-form, #newDiv, .badge {
+  color: whitesmoke;
 }

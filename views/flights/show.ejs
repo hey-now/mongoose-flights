@@ -20,11 +20,22 @@
             <td><%= flight.departs%></td>
         </tr>
     </tbody>
-    </table>
+    </table><br><br>
+
+<div id="ticketDiv">Tickets:</div><br>
+<form action="/flights/<%= flight._id %>/tickets" id="add-ticket-to-flight" method="POST">
+    <select name="ticketId">
+        <%- tickets.forEach(t =>
+            `<option value="${t._id}">${t.seat}</option>`
+        ) %>
+    </select>
+    <button type="submit">Add Ticket</button>
+</form>
+<a id="newTicket" href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>
 
 <br><br><h2>Add Destination and Arrival Date/Time</h2>
 <form id="add-dest-arrival-form" method="POST"
-action="/flights/<%= flight._id %>/dest-arrivals">
+action="/<%= flight._id %>/dest-arrivals">
 <label>Destination:</label>
 <select name="airport">
     <option value="AUS">AUS</option>
