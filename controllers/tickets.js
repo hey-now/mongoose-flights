@@ -16,6 +16,12 @@ function create(req, res) {
     });
 }
 
+// const ticket = req.body;
+// ticket.flight = req.params.id;
+// Ticket.create(ticket, function(err) {
+    // if(err)
+    // res.redirect(`/flights/${req.params.id`})})
+
 function newTicket(req, res) {
     res.render('tickets/new', {
         title: 'Add New Ticket',

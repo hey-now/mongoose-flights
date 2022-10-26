@@ -31,11 +31,11 @@ function create(req, res) {
 }
 
 function newFlight(req, res) {
-    res.render('flights/new');
+    res.render('flights/new', { title: 'New Flight'});
 }
 
 function index(req, res) {
     Flight.find({}).sort('departs').exec(function(err, flights) {
-        res.render('flights/index', { flights });
+        res.render('flights/index', { title: 'All Flights',flights});
     });
 }
